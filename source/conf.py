@@ -99,7 +99,11 @@ html_sidebars = {
 html_theme_options = {
     # Set the name of the project to appear in the sidebar
     'project_nav_name': u'Pine Script™ v5 User Manual',
+
+    # Visible levels of the global TOC; -1 means unlimited
+    "globaltoc_depth": 3
 }
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
