@@ -12,9 +12,6 @@
 Alerts
 ======
 
-.. contents:: :local:
-    :depth: 3
-
 
 
 Introduction
