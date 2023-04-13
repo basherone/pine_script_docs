@@ -471,7 +471,8 @@ Starting points are determined using the following rules, which depend on the ch
 
 - **1 - 14 minutes**: aligns to the beginning of a week.
 - **15 - 29 minutes**: aligns to the beginning of a month.
-- **30 minutes and higher**: aligns to the beginning of a year.
+- **30 - 1440 minutes**: aligns to the beginning of a year.
+- **1D and higher**: all available historical data.
 
 As time goes by, these factors cause your chart's history to start at different points in time.
 This often has an impact on your scripts calculations, because changes in calculation results in early bars can ripple through all the other bars in the dataset. 
