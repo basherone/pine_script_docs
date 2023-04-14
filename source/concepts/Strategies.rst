@@ -100,10 +100,28 @@ on the main chart pane and display simulated performance results in the
    `Point & Figure <https://www.tradingview.com/?solution=43000502276>`__, 
    and `Range <https://www.tradingview.com/?solution=43000474007>`__) 
    do not reflect actual market conditions. Strategy scripts will use the synthetic 
-   price values from these charts during simulation, which often do not reflect actual 
-   market prices and will thus produce unrealistic backtest results. We therefore 
+   price values from these charts during simulation, which often do not align with 
+   actual market prices and will thus produce unrealistic backtest results. We therefore 
    highly recommend using only standard chart types for backtesting strategies.
 
+..
+   Replace the note above with this once we've deployed "Fill orders using standard OHLC":
+
+   .. note::
+       The results from a strategy applied to non-standard charts 
+       (`Heikin Ashi <https://www.tradingview.com/?solution=43000619436>`__, 
+       `Renko <https://www.tradingview.com/?solution=43000502284>`__, 
+       `Line Break <https://www.tradingview.com/?solution=43000502273>`__, 
+       `Kagi <https://www.tradingview.com/?solution=43000502272>`__, 
+       `Point & Figure <https://www.tradingview.com/solution=43000502276>`__, 
+       and `Range <https://www.tradingview.com/?solution=43000474007>`__) 
+       do not reflect actual market conditions by default. Strategy scripts will use the 
+       synthetic price values from these charts during simulation, which often do not align 
+       with actual market prices and will thus produce unrealistic backtest results. We 
+       therefore highly recommend using only standard chart types for backtesting strategies. 
+       Alternatively, on Heikin Ashi charts, users can simulate orders using actual prices by 
+       enabling the "Fill orders using standard OHLC" option in the 
+       `strategy properties <https://www.tradingview.com/?solution=43000628599>`__.
 
 
 .. _PageStrategies_StrategyTester:
