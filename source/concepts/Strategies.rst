@@ -83,13 +83,13 @@ To test a strategy, apply it to the chart. You can use a built-in strategy from 
 "Indicators & Strategies" dialog box or write your own in the Pine Editor. Click 
 "Add to chart" from the "Pine Editor" tab to apply a script to the chart:
 
-.. image:: images/Applying-a-strategy-to-a-chart-1.png
+.. image:: images/Strategies-Applying-a-strategy-to-a-chart-1.png
 
 After a strategy script is compiled and applied to a chart, it will plot order marks 
 on the main chart pane and display simulated performance results in the 
 "Strategy Tester" tab below:
 
-.. image:: images/Applying-a-strategy-to-a-chart-2.png
+.. image:: images/Strategies-Applying-a-strategy-to-a-chart-2.png
 
 .. note:: 
    The results from a strategy applied to non-standard charts 
@@ -692,7 +692,7 @@ execution of order placement commands, including
 and `strategy.order() <https://www.tradingview.com/pine-script-reference/v5/#fun_strategy{dot}order>`__, 
 with the same ``oca_name``, depending on the ``oca_type`` that the user provides in the function call.
 
-`strategy.oca.cancel <https://www.tradingview.com/pine-script-reference/v5/#var_strategy{dot}oca{dot}cancel>__`
+`strategy.oca.cancel <https://www.tradingview.com/pine-script-reference/v5/#var_strategy{dot}oca{dot}cancel>`__
    This OCA type cancels all orders with the same ``oca_name`` upon the fill or partial fill of an order from the group.
 
 For example, the following strategy executes orders upon ``ma1`` crossing ``ma2``. When the 
@@ -842,7 +842,7 @@ order placement commands.
 .. note::
    If two order placement commands have the same ``oca_name`` but different ``oca_type`` values, 
    the strategy considers them to be from two distinct groups. i.e., OCA groups cannot combine 
-   `strategy.oca.cancel <https://www.tradingview.com/pine-script-reference/v5/#var_strategy{dot}oca{dot}cancel>__`, 
+   `strategy.oca.cancel <https://www.tradingview.com/pine-script-reference/v5/#var_strategy{dot}oca{dot}cancel>`__, 
    `strategy.oca.reduce <https://www.tradingview.com/pine-script-reference/v5/#var_strategy{dot}oca{dot}reduce>`__, 
    and `strategy.oca.none <https://www.tradingview.com/pine-script-reference/v5/#var_strategy{dot}oca{dot}none>`__ 
    OCA types.
@@ -1165,8 +1165,7 @@ At the ``exitIndex``, ``fillPrice`` is the
 value from the last closed trade. The script plots the expected fill price along with the 
 simulated fill price after slippage to visually compare the difference:
 
-.. image:: images/Strategies-Simulating-trading-costs-Slippage-and-limits-1.png
-
+.. image:: images/Strategies-Simulating-trading-costs-Slippage-and-unfilled-limits-1.png
 
 ::
 
@@ -1212,7 +1211,7 @@ value over the past ``length`` bars and there are no pending entries. The strate
 cancels all orders when the ``low`` is the ``lowest`` value. Each time the strategy triggers an order, it draws a 
 horizontal line at the ``limitPrice``, which it updates on each bar until closing the position or cancelling the order:
 
-.. image:: images/Strategies-Simulating-trading-costs-Slippage-and-limits-2.png
+.. image:: images/Strategies-Simulating-trading-costs-Slippage-and-unfilled-limits-2.png
 
 ::
 
@@ -1257,7 +1256,7 @@ Below, we have included ``backtest_fill_limits_assumption = 3`` in the
 As we can see, using limit verification omits some simulated order fills and changes the times of others since the 
 entry orders can now only fill after the price penetrates the limit price by three ticks:
 
-.. image:: images/Strategies-Simulating-trading-costs-Slippage-and-limits-3.png
+.. image:: images/Strategies-Simulating-trading-costs-Slippage-and-unfilled-limits-3.png
 
 .. note::
    It's important to notice that although the limit verification changed the times of some order fills, the strategy 
@@ -1452,7 +1451,7 @@ This script will populate the alert creation dialogue with its default message w
 Upon the alert trigger, the strategy will populate the placeholders in the alert message with their corresponding values. 
 For example:
 
-.. image:: images/Strategies-Strategy-alerts-1.png
+.. image:: images/Strategies-Strategy-alerts-2.png
 
 
 
