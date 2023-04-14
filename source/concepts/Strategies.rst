@@ -224,12 +224,9 @@ Since the emulator can only use chart data, it makes assumptions about intrabar 
 It uses a bar's open, high, and low prices to infer intrabar activity while calculating order 
 fills with the following logic:
 
-* If the high price is closer to the opening price than the low price, it assumes that the 
-   price moved in this order on the bar: open → high → low → close.
-* If the low price is closer to the opening price than the high price, it assumes that the 
-   price moved in this order on the bar: open → low → high → close.
-* The broker emulator assumes no gaps exist between prices within bars; in the "eyes" of the 
-   emulator, the full range of intrabar prices is available for order execution.
+* If the high price is closer to the opening price than the low price, it assumes that the price moved in this order on the bar: open → high → low → close.
+* If the low price is closer to the opening price than the high price, it assumes that the price moved in this order on the bar: open → low → high → close.
+* The broker emulator assumes no gaps exist between prices within bars; in the "eyes" of the emulator, the full range of intrabar prices is available for order execution.
 
 .. image:: images/Strategies-Broker-emulator-1.png
 
