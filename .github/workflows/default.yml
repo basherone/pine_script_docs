@@ -14,8 +14,8 @@ jobs:
     
     - name: init env
       run: |
-        sudo apt-get update -y
-        sudo apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+        apt-get update -y
+        apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
     
     - uses: actions/checkout@v1
     # Standard drop-in approach that should work for most people.
