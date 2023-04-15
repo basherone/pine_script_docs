@@ -32,11 +32,13 @@ jobs:
       with:
         name: DocumentationHTML
         path: _build/html/
+        docs-folder: "."
     # Create an artifact out of the previously built pdf.
     - uses: actions/upload-artifact@v1
       with:
         name: Documentation
         path: _build/latex/pdfexample.pdf
+        docs-folder: "."
     # Publish built docs to gh-pages branch.
     # ===============================
     - name: Commit documentation changes
